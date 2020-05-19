@@ -1,0 +1,44 @@
+{
+  "command": [
+    {
+      "name": "teste01",
+      "perms": [],
+      "actions": [
+        {
+          "name": "test message",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "général",
+          "messagetext": "Bonjour tlm"
+        },
+        {
+          "name": "send image",
+          "category": "Message",
+          "type": "Send Image",
+          "channelname": "général",
+          "url": "https://upload.wikimedia.org/wikipedia/fr/thumb/0/05/Discord.svg/1200px-Discord.svg.png"
+        }
+      ]
+    },
+    {
+      "name": "ThisChannel",
+      "perms": [],
+      "actions": [
+        {
+          "name": "Get channel Name",
+          "category": "Variable",
+          "type": "Get Command Channel",
+          "varname": "chan",
+          "vartype": "Channel"
+        },
+        {
+          "name": "cccc",
+          "category": "Message",
+          "type": "Send Message",
+          "channelname": "%%chan%%",
+          "messagetext": "bonjour message %%chan%%"
+        }
+      ]
+    }
+  ]
+}

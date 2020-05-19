@@ -1,0 +1,160 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "teste01",
+      "guid": "532361af-39fb-46d8-89eb-6b2a9722ee3c",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "077c09d0-1c73-4f0a-8815-b671a31bdddc"
+          ]
+        }
+      ],
+      "x": 240,
+      "y": 199,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "test message",
+      "guid": "077c09d0-1c73-4f0a-8815-b671a31bdddc",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "48e3f0d1-6616-4d3f-97ea-e2c075d9af40"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "532361af-39fb-46d8-89eb-6b2a9722ee3c"
+        }
+      ],
+      "x": 597,
+      "y": 203,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "général",
+        "Bonjour tlm"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "send image",
+      "guid": "48e3f0d1-6616-4d3f-97ea-e2c075d9af40",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "077c09d0-1c73-4f0a-8815-b671a31bdddc"
+        }
+      ],
+      "x": 928,
+      "y": 182,
+      "rtype": "Message",
+      "rsubtype": "Send Image",
+      "formdata": [
+        "général",
+        "https://upload.wikimedia.org/wikipedia/fr/thumb/0/05/Discord.svg/1200px-Discord.svg.png"
+      ],
+      "formnames": [
+        "channelName",
+        "url"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "Get channel Name",
+      "guid": "ce9242ae-3034-4b6c-abfc-2a4fc62a6e67",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "620347aa-a0d0-4c4d-926a-c2afdfe3a41d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f5e6a4ac-863f-48a2-b07f-b3acb2d5476a"
+        }
+      ],
+      "x": 537,
+      "y": 459,
+      "rtype": "Variable",
+      "rsubtype": "Get Command Channel",
+      "formdata": [
+        "chan",
+        "Channel"
+      ],
+      "formnames": [
+        "varname",
+        "vartype"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "ThisChannel",
+      "guid": "f5e6a4ac-863f-48a2-b07f-b3acb2d5476a",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "ce9242ae-3034-4b6c-abfc-2a4fc62a6e67"
+          ]
+        }
+      ],
+      "x": 206,
+      "y": 450,
+      "perms": []
+    },
+    {
+      "type": "response",
+      "name": "cccc",
+      "guid": "620347aa-a0d0-4c4d-926a-c2afdfe3a41d",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ce9242ae-3034-4b6c-abfc-2a4fc62a6e67"
+        }
+      ],
+      "x": 863,
+      "y": 510,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "%%chan%%",
+        "bonjour message %%chan%%"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText"
+      ]
+    }
+  ]
+}
